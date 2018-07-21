@@ -1,0 +1,65 @@
+; emFile Example
+G21 ; set units to MM (required)
+G90 ; absolute position mode (required)
+F100 ; feedrate
+G2000 ; spindle speed
+; starting finishing
+M6 T2 ; change tool to 'end 1/8'
+G0 X-11.5875 Y11.4125 Z1.0
+G1 Z-2.999 F800
+G1 Y-11.4125
+G1 X-19.5875
+G1 Y-15.4125
+G1 X-46.4125
+G1 Y-11.4125
+G1 X-54.4125
+G1 Y11.4125
+G1 X-46.4125
+;
+;
+; these comment lines show overrun errors
+;    Opens a file, reads a buffer, scans buffer for lines, prints lines
+;    Reading buffer length into ram then line scanning is faster than 
+;    single character reads. 
+;    
+;    Approach here allows for line by line processing and line content 
+;    filtering as well, see switch statement.
+;    
+;    Change BUFFERLEN, LINELEN, switch cases to match application requirements.
+;
+;
+G1 Y15.4125
+G1 X-19.5875
+G1 Y11.4125
+G1 X-11.5875
+G0 Z1.0
+G0 X-13.4125 Y29.5875
+G1 Z-2.999
+G1 Y33.5875
+G1 X-21.4125
+G1 Y56.4125
+G1 X-13.4125
+G1 Y60.4125
+G1 X13.4125
+G1 Y56.4125
+G1 X21.4125
+G1 Y33.5875
+G1 X13.4125
+G1 Y29.5875
+G1 X-13.4125
+G0 Z1.0
+G0 X11.5875 Y11.4125
+G1 Z-2.999
+G1 X19.5875
+G1 Y15.4125
+G1 X46.4125
+G1 Y11.4125
+G1 X54.4125
+G1 Y-11.4125
+G1 X46.4125
+G1 Y-15.4125
+G1 X19.5875
+G1 Y-11.4125
+G1 X11.5875
+G1 Y11.4125
+G0 Z1.0
