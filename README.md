@@ -12,6 +12,8 @@ Reads "test.txt" from fat32 SD card.
 
 Change BUFFERLEN, LINELEN, switch cases to match application requirements.
 
+see UM02001.pdf, UM02001 User Guide & Reference Manual for emFile Segger
+https://www.segger.com/downloads/emfile/UM02001
 
 ![Hardware](emFileConsole.cydsn/images/emFileConsoleHardware.jpg)
 
